@@ -30,14 +30,14 @@ const NavbarProfileDroddown = ({ closeProfileDropdown }) => {
       </section>
       <ul className='py-4 pl-5 pr-8 flex flex-col items-start justify-center text-sm text-[#585858]'>
         <li className='flex items-center justify-start w-full'>
-          <Link to="/my-blogs" className='py-2 pr-6 pl-1 w-full hover:text-black'>My Blogs</Link>
+          <Link to="/my-blogs" className='py-2 pr-6 pl-1 w-full hover:text-black'>Bloglarım</Link>
         </li>
         <li className='flex items-center justify-start w-full'>
-          <Link to="/bookmarks" className='py-2 pr-6 pl-1 w-full hover:text-black'>Bookmarks</Link>
+          <Link to="/bookmarks" className='py-2 pr-6 pl-1 w-full hover:text-black'>Kaydedilenler</Link>
         </li>
         <li className='flex items-center justify-start w-full cursor-pointer'>
           <button className=' text-start py-2 pr-6 pl-1 w-full hover:text-black' onClick={handleSignOut}>
-            Sign Out
+           Çıkış
           </button>
         </li>
       </ul>

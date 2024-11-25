@@ -68,7 +68,7 @@ function Navbar(){
         <div className='flex items-center justify-between'>
           <section className='m-1'>
             <Link to={'/'}>
-              <div className='font-bold font-logo1 text-2xl'>.blog</div>
+              <div className='font-bold font-logo1 text-2xl'>MyBlog</div>
             </Link>
           </section>
           <section className='flex flex-row items-center justify-between m-1 text-lg w-auto'>
@@ -76,7 +76,7 @@ function Navbar(){
             <Link to={'/add-blog'} className='group mx-4 mt-2 mb-1 text-base font-normal text-[#585858] hover:text-black hover:font-medium'>
               <div className='flex items-center justify-between gap-1 mb-1'>
                 <AiOutlinePlus />
-                Create
+                Oluştur
               </div>
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-[1px] bg-[#a09d9d]"></span>
             </Link>
@@ -98,7 +98,7 @@ function Navbar(){
                       ?
                       <img src={imgUrl} alt={name.charAt(0)} className='w-8 h-8 rounded-full object-contain'/>
                       : 
-                      <span className='bg-[#1A8917] hover:bg-[#105a0f] w-9 h-9 flex items-center justify-center rounded-full text-white font-medium text-base'>{name.charAt(0)}</span>
+                      <span className='bg-blue-700 hover:bg-blue-800 w-9 h-9 flex items-center justify-center rounded-full text-white font-medium text-base'>{name.charAt(0)}</span>
                     }
                   </div>
                   <MdKeyboardArrowDown className={showProfileDropdown && 'rotate-180'}/>

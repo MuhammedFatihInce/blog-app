@@ -28,16 +28,14 @@ const CommentSection = () => {
   return (
     <div id='commentSection' className='mb-6 flex flex-col items-start justify-normal gap-3'>
       <span className='px-1 font-medium text-2xl '>
-        Comments
+        Yorum Yaz
       </span>
       <section className='commentForm mt-3 mb-5 w-[100%] flex flex-col gap-3'>
         <ReactQuill placeholder='Add Comment' modules={modules} theme="snow" value={comment} onChange={setComment} />
-        <button onClick={handlePostCommentButton} className='mx-auto w-20 px-4 py-2 bg-[#1A8917] hover:bg-[#127011] text-white font-medium text-base rounded-full border-none'>
-          Post
-        </button>
+        <button onClick={handlePostCommentButton} type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-full  text-sm mx-auto w-20 px-4 py-2 text-center ">Gönder</button>
       </section>
       <span className='px-1 text-base text-[#504f4f]'>
-        Recent Comments
+        Yorumlar
       </span>
       <section className='w-full h-[1px] bg-[#e9e6e6]'></section>
       <CommentsList />

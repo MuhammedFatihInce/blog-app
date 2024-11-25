@@ -102,14 +102,12 @@ const BlogForm = ({ type, authorId, blogId, initialTitle = '', initialContent = 
               value={title}
               onChange={(e) => { setTitle(e.target.value) }}
               className="w-[80%] p-4 text-2xl border-[1px] border-solid border-[#cac7c7] outline-none placeholder:text-3xl placeholder:font-medium placeholder:text-[#a09e9e] focus:"
-              placeholder="Title"
+              placeholder="Başlık"
             />
-            <button onClick={handlePostButton} className='px-4 py-2 bg-[#1A8917] hover:bg-[#105a0f] text-white font-medium text-base rounded-full border-none mr-4'>
-              Post
-            </button>
+             <button onClick={handlePostButton} type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-full  text-sm mx-auto w-20 px-4 py-2 text-center ">Gönder</button>
           </section>
           <div className='mb-2 w-[100%]'>
-            <ReactQuill style={{ width: '100%' }} placeholder='Content' modules={modules} theme="snow" value={content} onChange={setContent} />
+            <ReactQuill style={{ width: '100%' }} placeholder='İçerik' modules={modules} theme="snow" value={content} onChange={setContent} />
           </div>
           <input
             type="text"
@@ -117,7 +115,7 @@ const BlogForm = ({ type, authorId, blogId, initialTitle = '', initialContent = 
             onChange={(e) => { setTag(e.target.value) }}
             onKeyDown={handleEnterKey}
             className="w-[80%] p-5 text-lg border-[1px] border-solid border-[#cac7c7] outline-none placeholder:text-2xl placeholder:font-medium placeholder:text-[#777373] focus:"
-            placeholder="Add Tags"
+            placeholder="Etiket Ekle"
           />
           <section className='flex items-center justify-start flex-wrap gap-2 w-[80%] h-auto mt-2 mb-2'>
             {

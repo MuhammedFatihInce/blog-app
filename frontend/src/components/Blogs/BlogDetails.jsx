@@ -92,7 +92,7 @@ const BlogDetails = () => {
                             :
                             author?.name.charAt(0)
                             &&
-                            <span className='bg-[#1A8917] hover:bg-[#105a0f] w-9 h-9 flex items-center justify-center rounded-full text-white font-medium text-base'>{author?.name.charAt(0)}</span>
+                            <span className='bg-blue-700 hover:bg-blue-800 w-9 h-9 flex items-center justify-center rounded-full text-white font-medium text-base'>{author?.name.charAt(0)}</span>
                         }
                       </div>
                       <span className='text-base font-semibold mx-1'>{author?.name}</span>

@@ -34,7 +34,7 @@ const SearchedBlogs = ({type}) => {
 
   return (
     <div className='p-14 flex flex-col items-start justify-start gap-4'>
-      <h1 className='font-semibold tracking-wider text-3xl text-[#333131]'>Results for {params.name} {searchInput}</h1>
+      <h1 className='font-semibold tracking-wider text-3xl text-[#333131]'>Arama Sonuçları {params.name} {searchInput}</h1>
       <div className='w-full h-[1px] bg-[#f0eeee] mt-6'></div>
       <div className='flex justify-start w-full'>
         <BlogsList blogsData={blogsData} callback={handleShowMoreButton}/>

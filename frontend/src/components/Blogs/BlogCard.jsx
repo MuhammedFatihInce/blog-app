@@ -6,6 +6,7 @@ import Img from '../../assets/contact_app.png';
 import { removeTags } from '../../helpers/removeTags';
 import { BookmarkBlog } from '../../redux/slices/blogsSlice';
 import { toast } from "react-toastify";
+import 'flowbite';
 
 const BlogCard = ({ _id, title, content, createdAt, author, tags = null }) => {
 
@@ -33,9 +34,9 @@ const BlogCard = ({ _id, title, content, createdAt, author, tags = null }) => {
   }
 
   return (
-    <article className='relative w-full'>
+    <article className='relative w-full '>
       <button onClick={handleBookmarkButton} className='group p-1 absolute bottom-0 right-0'>
-        <BiSolidBookmark className={`${isBookmarked ? 'text-[#1A8917] stroke-none' : 'text-white'} stroke-1 w-5 h-5 stroke-[#585858]`} />
+        <BiSolidBookmark className={`${isBookmarked ? 'text-[#007BFF] stroke-none' : 'text-white'} stroke-1 w-5 h-5 stroke-[#585858]`} />
       </button>
       <div className='flex flex-col items-start justify-start gap-4'>
         <Link to={"/author/" + author?._id}>
@@ -46,7 +47,7 @@ const BlogCard = ({ _id, title, content, createdAt, author, tags = null }) => {
                   ?
                   <img src={author?.imgUrl} alt={author?.name.charAt(0)} className='w-8 h-8 rounded-full object-contain' />
                   :
-                  <span className='bg-[#1A8917] hover:bg-[#105a0f] w-8 h-8 flex items-center justify-center rounded-full text-white font-medium text-base'>{author?.name.charAt(0)}</span>
+                  <span className='bg-blue-700 hover:bg-blue-800 w-8 h-8 flex items-center justify-center rounded-full text-white font-medium text-base'>{author?.name.charAt(0)}</span>
               }
             </div>
             <span className='text-sm font-semibold mr-1'>{author.name}</span>
@@ -58,7 +59,13 @@ const BlogCard = ({ _id, title, content, createdAt, author, tags = null }) => {
           <section className='flex items-center justify-between'>
             <section className='flex flex-col items-start justify-start gap-2 mb-2'>
               <h1 className='text-xl font-semibold'>{title}</h1>
-              <div className='line-clamp-3 text-base font-normal'>{plainContent}</div>
+              {/* <div className='line-clamp-3 text-base font-normal'>{plainContent}</div> */}
+
+               <figure class="relative max-w-sm w-60 transition-all duration-300 cursor-pointer hover:scale-105">
+                <a href="#">
+                  <img class="rounded-lg w-full h-auto" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png" alt="image description"></img>
+                </a>
+              </figure>
             </section>
             {/* <section className=' w-28 h-auto overflow-hidden'>
               <img src={Img} alt="img" className=' object-cover'/>
@@ -81,6 +88,10 @@ const BlogCard = ({ _id, title, content, createdAt, author, tags = null }) => {
         </section>
       </div>
     </article>
+
+
+   
+
   )
 }
 
